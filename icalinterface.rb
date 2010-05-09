@@ -1,6 +1,7 @@
 # Every active record model that implements the ActiveICal interface object must
 # have a string value either in the DB or initialized in memory called "ical"
-module ActiveICal
+require 'ri_cal'
+module Actic
   module Event
     module ClassMethods; end
 
