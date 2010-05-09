@@ -107,12 +107,17 @@ module Actic
       @ic ? @ic : @ic = RiCal.parse_string(self.ical).first
     end
 
-    ## Can add a subcomponent as a String, Actic enabled Model, or a RiCal component 
+    ## Can add a subcomponent as a String, Actic enabled Model, or a RiCal component
+    ## If the argument is a Actic Model, attempt to create an association (currently only works with has_many)
     def add_subcomponent(comp)
       i = icalendar
       if comp.is_a? String
         i.add_subcomponent(RiCal.parse_string(comp).first)
       elsif comp.respond_to? "ic_component"
+        assoc = comp.class.to_s.downcase.pluralize.to_sym
+        if self.class.reflect_on_association assoc
+          eval "#{assoc} << comp"
+        end
         i.add_subcomponent(RiCal.parse_string(comp.ievent.to_rfc2445_string).first)
       else
         i.add_subcomponent(RiCal.parse_string(comp.to_rfc2445_string).first)

@@ -4,15 +4,27 @@ This is a very early beta, functionality is currently very limited.
 
 Models implementing this interface will need to offer an 'ical' string field ( t.string :ical ) in the database schema.
 
-##    class Event < ActiveRecord::Base
-##      include Actic::Event
-##    end
+    class Event < ActiveRecord::Base
+      include Actic::Event
+    end
 
-    e = Event.new
-    e.start_time = DateTime.now
-    e.end_time = DateTime.now + 3.hours
-    e.recurrence = "FREQ=DAILY;COUNT=10"
-    e.description = "Bake Cake"
-    e.occurrences(:after => DateTime.now, :before => (DateTime.now + 5.days))
+    event = Event.new
+    event.start_time = DateTime.now
+    event.end_time = DateTime.now + 3.hours
 
-Will implement a more railsy archicitecture soon ( acts_as_actic ) 
+    event.recurrence = "FREQ=DAILY;COUNT=10"
+    # OR
+    event.recurs :freq => :daily, :count => 10
+
+    event.description = "Bake Cake"
+    event.occurrences(:after => DateTime.now, :before => (DateTime.now + 5.days))
+
+
+   class Calendar < ActiveRecord::Base
+     include Actic::Calendar
+   end
+
+   c = Calendar.new
+   c.add_subcomponent event
+
+Will implement a more railsy archicitecture soon ( acts_as_actic )
