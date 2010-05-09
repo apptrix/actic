@@ -1,8 +1,16 @@
-# Every active record model that implements the ActiveICal interface object must
+# Every active record model that implements the interface must
 # have a string value either in the DB or initialized in memory called "ical"
 require 'ri_cal'
 module Actic
+  def ic_respond
+    true
+  end
   module Event
+
+  def ic_component
+    true
+  end
+
     module ClassMethods; end
 
     def self.included(base)
@@ -42,8 +50,30 @@ module Actic
       ievent.rrule=rec; si(@ic)
     end
 
+    ## e.recurs :freq => :daily, :count => 10
+    ## e.recurs :string => "FREQ=WEEKLY;COUNT=10;"
+    ## NOTE - if specifying :string, all other options are overridden
+    def recurs(opts = {})
+      rec = ""
+
+      unless opts[:freq].nil?
+        #p "Frequency Present"
+        rec += "FREQ=#{opts[:freq].to_s.upcase};"
+      end
+      unless opts[:count].nil?
+        #p "Count Present"
+        rec += "COUNT=#{opts[:count].to_i};"
+      end
+      unless opts[:string].nil?
+        #p "String Present"
+        rec = opts[:string]
+      end
+      ievent.rrule=rec; si(@ic)
+      #rec
+    end
+
     def occurrences(*oc)
-      ievent.occurrences(*oc)
+      ievent.occurrences(*oc);
     end
 
     private
@@ -77,9 +107,21 @@ module Actic
       @ic ? @ic : @ic = RiCal.parse_string(self.ical).first
     end
 
+    ## Can add a subcomponent as a String, Actic enabled Model, or a RiCal component 
     def add_subcomponent(comp)
-      icalendar.add_subcomponent(RiCal.parse_string(comp).first)
+      i = icalendar
+      if comp.is_a? String
+        i.add_subcomponent(RiCal.parse_string(comp).first)
+      elsif comp.respond_to? "ic_component"
+        i.add_subcomponent(RiCal.parse_string(comp.ievent.to_rfc2445_string).first)
+      else
+        i.add_subcomponent(RiCal.parse_string(comp.to_rfc2445_string).first)
+      end
       si(@ic)
+    end
+
+    def events
+      icalendar.events
     end
 
     #  alias event= add_subcomponent

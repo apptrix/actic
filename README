@@ -5,7 +5,7 @@ This is a very early beta, functionality is currently very limited.
 Models implementing this interface will need to offer an 'ical' string field ( t.string :ical ) in the database schema.
 
 ##    class Event < ActiveRecord::Base
-##      include ActiveICal::Event
+##      include Actic::Event
 ##    end
 
     e = Event.new
