@@ -42,6 +42,10 @@ module Actic
       ievent.rrule=rec; si(@ic)
     end
 
+    def occurrences(oc)
+      ievent.occurrences(oc); si(@ic)
+    end
+
     private
 
     def set_ievent(ic = nil)
