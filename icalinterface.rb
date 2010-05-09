@@ -114,9 +114,13 @@ module Actic
       if comp.is_a? String
         i.add_subcomponent(RiCal.parse_string(comp).first)
       elsif comp.respond_to? "ic_component"
+        #p "Item is a subcomponent"
         assoc = comp.class.to_s.downcase.pluralize.to_sym
         if self.class.reflect_on_association assoc
-          eval "#{assoc} << comp"
+          #p "Item has association - #{assoc.to_s} on self: "
+          eval "#{assoc.to_s} << comp"
+        else
+          p "Item has no association on self"
         end
         i.add_subcomponent(RiCal.parse_string(comp.ievent.to_rfc2445_string).first)
       else
