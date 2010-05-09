@@ -42,8 +42,8 @@ module Actic
       ievent.rrule=rec; si(@ic)
     end
 
-    def occurrences(oc)
-      ievent.occurrences(oc); si(@ic)
+    def occurrences(*oc)
+      ievent.occurrences(*oc)
     end
 
     private
