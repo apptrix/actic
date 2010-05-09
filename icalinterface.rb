@@ -39,7 +39,7 @@ module Actic
     end
 
     def recurrence=(rec)
-      ievent.recurrence=rec; si(@ic)
+      ievent.rrule=rec; si(@ic)
     end
 
     private
