@@ -32,15 +32,6 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" highlightNonProjectFiles="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="actic_generator.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/generators/active_record/actic_generator.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="25" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,10 +59,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actic.gemspec" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="actic.gemspec" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actic.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.10367893">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.2962964">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="40" selection-start="151" selection-end="151" vertical-scroll-proportion="0.080267556">
               <folding />
             </state>
           </provider>
@@ -142,6 +142,7 @@
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/lib/generators/actic/actic_generator.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
   </component>
@@ -393,7 +394,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/actic.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.10367893">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.2962964">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="40" selection-start="151" selection-end="151" vertical-scroll-proportion="0.080267556">
           <folding />
         </state>
       </provider>
