@@ -40,6 +40,6 @@ Models implementing this interface will need to offer an 'ical' string field ( t
 Will implement a more railsy archicitecture soon ( acts_as_actic )
 
 
-Copyright (c) 2010 [name of plugin creator], released under the MIT license
+Copyright (c) 2010 Steve Martin, released under the MIT license
 
 

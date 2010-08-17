@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3cf5bac-e354-4650-bb9d-a7a20e63c8a1" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/generators/active_record/templates/migration.rb" afterPath="$PROJECT_DIR$/lib/generators/actic/actic/templates/migration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/generators/actic/install/templates/actic.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/generators/actic_install_generator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/generators/actic/install_generator.rb" afterPath="$PROJECT_DIR$/lib/generators/actic/install/install_generator.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/generators/actic/install/templates/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MIT-LICENSE" afterPath="$PROJECT_DIR$/MIT-LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/generators/actic_generator.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/generators/actic/actic/actic_generator.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/generators/actic/actic_generator.rb" afterPath="" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="actic.iws" />
@@ -38,25 +30,25 @@
       <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/generators/actic/install/templates/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="42" column="26" selection-start="984" selection-end="984" vertical-scroll-proportion="-18.666666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actic_generator.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/generators/actic/actic/actic_generator.rb">
+      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="28" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.0">
+            <state line="42" column="31" selection-start="989" selection-end="989" vertical-scroll-proportion="-18.666666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install.rb">
+      <file leaf-file-name="MIT-LICENSE" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MIT-LICENSE">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="en.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="23" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0794702">
+            <state line="4" column="23" selection-start="80" selection-end="80" vertical-scroll-proportion="-1.7777778">
               <folding />
             </state>
           </provider>
@@ -140,7 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/generators/active_record/templates/migration.rb" />
         <option value="$PROJECT_DIR$/init.rb" />
         <option value="$PROJECT_DIR$/lib/generators/active_record/actic_generator.rb" />
         <option value="$PROJECT_DIR$/lib/generators/actic/orm_helpers.rb" />
@@ -148,13 +139,15 @@
         <option value="$PROJECT_DIR$/lib/actic.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/lib/generators/actic/actic_generator.rb" />
         <option value="$PROJECT_DIR$/lib/generators/actic_install_generator.rb" />
         <option value="$PROJECT_DIR$/lib/generators/actic/actic/actic_generator.rb" />
         <option value="$PROJECT_DIR$/lib/generators/actic/install/templates/actic.rb" />
         <option value="$PROJECT_DIR$/lib/generators/actic/install/install_generator.rb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
+        <option value="$PROJECT_DIR$/lib/generators/actic/install/templates/README" />
+        <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/MIT-LICENSE" />
       </list>
     </option>
   </component>
@@ -495,11 +488,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/generators/active_record/actic_generator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="25" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/init.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
@@ -516,18 +504,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actic.gemspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="40" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/actic/install/templates/README">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
@@ -588,7 +564,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="23" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0794702">
+        <state line="4" column="23" selection-start="80" selection-end="80" vertical-scroll-proportion="-1.7777778">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/actic/install/templates/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="26" selection-start="984" selection-end="984" vertical-scroll-proportion="-18.666666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="31" selection-start="989" selection-end="989" vertical-scroll-proportion="-18.666666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIT-LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
