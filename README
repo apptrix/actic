@@ -19,7 +19,7 @@ Generators
 API Example
 ==========
 
-Models implementing this interface will need to offer an 'ical' string field ( t.string :ical ) in the database schema.
+Models implementing this interface will need to offer an 'ical' string field ( t.string :ical ) in the database schema. ( if you use the generators you wont need to worry about this )
 
     class Event < ActiveRecord::Base
       include Actic::Event
