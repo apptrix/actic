@@ -3,13 +3,7 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
-        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" git="false" />
-      </requirement>
-      <source from="Gemfile" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="ri_cal" version="0" bound="GREATER_OR_EQUAL" lib="ri_cal" git="false" />
+        <dependency name="ri_cal" version="0" bound="GREATER_OR_EQUAL" lib="ri_cal" git="true" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
