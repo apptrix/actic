@@ -1,0 +1,21 @@
+GIT
+  remote: git@github.com:tevio/ri_cal.git
+  revision: 9523264c8c87ad54f557d2e2d93e8d4b69d28983
+  specs:
+    ri_cal (0.8.7)
+
+PATH
+  remote: .
+  specs:
+    actic (0.0.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  actic!
+  ri_cal!

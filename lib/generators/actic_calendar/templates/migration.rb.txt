@@ -1,10 +1,12 @@
-class ActicCreate<%= table_name.camelize %> < ActiveRecord::Migration
+class Create<%= table_name.camelize %> < ActiveRecord::Migration
   def self.up
     create_table(:<%= table_name %>) do |t|
       t.string :ical
 
+<% if attributes %>
 <% for attribute in attributes -%>
-      t.<%= attribute.type %> :<%= attribute.name %>
+      t.<%= attribute[:type] %> :<%= attribute[:name] %>
+<% end -%>
 <% end -%>
 
       t.timestamps

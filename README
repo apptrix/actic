@@ -1,18 +1,25 @@
 Actic
 =====
-
-This gem fuses ical with ORM, it can be used to create calendar objects and events at the moment,
-more subcomponents will be added in time
-
-
-Example
-=======
-
 Hi,
 
 This is a very early beta, functionality is currently very limited.
 
-Models implementing this interface will need to offer an 'ical' string field ( t.string :ical ) in the database schema.
+This gem fuses iCalendar with ORM, can be used to make your data model date and event aware.
+it can be used to create calendar objects and events at the moment,
+more subcomponents will be added in time
+
+Generators
+=========
+
+    rails g actic_calendar ### will generate a calendar model and migration with the model name Calendar.
+    rails g actic_calendar NuCal owner:references ### you can supply a name and/or additional database fields
+    rails g actic_calendar owner:references ### you can supply additional fields and no name!
+
+
+API Example
+==========
+
+Models implementing this interface will need to offer an 'ical' string field ( t.string :ical ) in the database schema. ( if you use the generators you wont need to worry about this )
 
     class Event < ActiveRecord::Base
       include Actic::Event
@@ -37,8 +44,8 @@ Models implementing this interface will need to offer an 'ical' string field ( t
    c = Calendar.new
    c.add_subcomponent event
 
-Will implement a more railsy archicitecture soon ( acts_as_actic )
 
+Many Thanks to RubyRedrick ( Rick DeNatale ) for the awesome ri_cal library
 
 Copyright (c) 2010 Steve Martin, released under the MIT license
 
