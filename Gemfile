@@ -26,4 +26,4 @@ platforms :ruby do
   end
 end
 
-gem 'ri_cal', :require => 'ri_cal', :git => "git@github.com:tevio/ri_cal.git"
+# gem 'ri_cal', :require => 'ri_cal', :git => "git@github.com:tevio/ri_cal.git"

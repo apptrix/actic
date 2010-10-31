@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "actic"
 
-  #s.add_dependency('rical', '>= 0.8.7')
+  s.add_dependency('ri_cal', '>= 0.8.7')
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
