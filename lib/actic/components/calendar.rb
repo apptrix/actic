@@ -32,7 +32,6 @@ module Actic
     # is instantiated
     # This method updates the existing ical string with new values
     # or creates one from a RiCal.Calendar if its not already present
-    #
     def set_icomponent(ic = nil)
       # if the ical value already exists ( not a new model ) and this is being called during initialization
       if !ical.nil? && ic.nil?

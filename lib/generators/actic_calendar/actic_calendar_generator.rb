@@ -11,12 +11,7 @@ class ActicCalendarGenerator < Rails::Generators::Base
   argument :name, :type => :string, :default => "calendar"
   argument :attributes, :type => :array, :default => [], :banner => "field:type field:type", :required => false
 
-
-   def create_migration_file
-     migration_template 'migration.rb.txt', "db/migrate/create_#{table_name}.rb"
-   end
-
-  def generate_model
+  def generate_component
     if name.include? ":"
       self.attributes = name
       self.name = "calendar"

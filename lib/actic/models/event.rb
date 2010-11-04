@@ -1,5 +1,4 @@
-module Actic
-  class Event < SubComponent
-      belongs_to :calendar
-  end
+class ActicEvent < SubComponent
+    include Actic::SubComponent::Event
+    belongs_to :calendar
 end

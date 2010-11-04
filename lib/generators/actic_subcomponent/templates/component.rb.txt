@@ -1,0 +1,34 @@
+<% if subcomponent == "calendar" -%>
+    inherit = "ActicEvent"
+    has = has_many :actic_events,
+<% elsif subcomponent == "event" -%>
+<%
+    inherit = "ActicEvent"
+    rel = "belongs_to :actic_calendar"
+    has = "has_many :actic_alarms"
+ -%>
+<% elsif subcomponent == "todo" %>
+<% inherit = "ActicTodo" %>
+<%
+    rel = "belongs_to :actic_calendar"
+    has = "has_many :actic_alarms"
+-%>
+<% elsif subcomponent == "journal" -%>
+<% inherit = "ActicJournal" -%>
+<%
+    rel = "belongs_to :actic_calendar"
+    has = "has_many :actic_alarms"
+-%>
+<% elsif subcomponent == "alarm" -%>
+<% inherit = "ActicAlarm" -%>
+<%
+    rel = "belongs_to :actic_event\nbelongs_to :actic_todo\nbelongs_to :actic_journal"
+-%>
+<% elsif subcomponent == "timezone" -%>
+<% inherit = "ActicTimeZone" -%>
+<% end -%>
+class <%= name.classify %> < <%= inherit %>
+  set_table_name :<%= table_name %>
+  <%= rel %>
+  <%= has %>
+end

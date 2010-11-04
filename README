@@ -15,6 +15,13 @@ Generators
     rails g actic_calendar NuCal owner:references ### you can supply a name and/or additional database fields
     rails g actic_calendar owner:references ### you can supply additional fields and no name!
 
+Or you can generate components at a more granular level
+
+Components
+=========
+
+    rails g actic_subcomponent MyEvent event name:string
+
 
 API Example
 ==========
