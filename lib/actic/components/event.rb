@@ -1,9 +1,8 @@
 module Actic
-module Event
 
-  def ic_component
-    true
-  end
+module SubComponent
+  module Event
+  include Actic
 
     module ClassMethods; end
 
@@ -13,7 +12,7 @@ module Event
     end
 
     def ievent
-      @ic ? @ic : @ic = RiCal.parse_string(self.ical).first
+      icomponent
     end
 
     def description=(desc)
@@ -87,5 +86,5 @@ module Event
 
     alias si set_ievent
   end
-
+end
 end

@@ -1,40 +1,25 @@
 module Actic
   module Calendar
+    include Actic
     module ClassMethods; end
 
+    # For any Class the module is included ( mixed in ) into
     def self.included(base)
       base.extend(ClassMethods)
+      # execute the set_ical method on object initialization
       base.send :after_initialize, :si
     end
 
+    # This method fetches the ical string and parses it into an instance of RiCal::Componet::Calendar
     def icalendar
-      @ic ? @ic : @ic = RiCal.parse_string(self.ical).first
+      icomponent
     end
+    #  @ic ? @ic : @ic = RiCal.parse_string(self.ical).first
+    #end
 
-    ## Can add a subcomponent as a String, Actic enabled Model, or a RiCal component
-    ## If the argument is an Actic Model, attempt to create an association (currently only works with has_many)
-    def add_subcomponent(comp)
-      i = icalendar
-      if comp.is_a? String
-        i.add_subcomponent(RiCal.parse_string(comp).first)
-      elsif comp.respond_to? "ic_component"
-        #p "Item is a subcomponent"
-        assoc = comp.class.to_s.downcase.pluralize.to_sym
-        if self.class.reflect_on_association assoc
-          #p "Item has association - #{assoc.to_s} on #{self.class.to_s} "
-          eval "#{assoc.to_s} << comp"
-        else
-          p "Item has no association on self"
-        end
-        i.add_subcomponent(RiCal.parse_string(comp.ievent.to_rfc2445_string).first)
-      else
-        i.add_subcomponent(RiCal.parse_string(comp.to_rfc2445_string).first)
-      end
-      si(@ic)
-    end
 
     def events
-      icalendar.events
+      icomponent.events
     end
 
     #  alias event= add_subcomponent
@@ -43,9 +28,13 @@ module Actic
     #end
 
     private
-    # This method leverages the RiCal.Calendar class to create
-    # an icalendar string or to parse
-    def set_ical(ic = nil)
+    # This method is triggered every time an object implementing this module
+    # is instantiated
+    # This method updates the existing ical string with new values
+    # or creates one from a RiCal.Calendar if its not already present
+    #
+    def set_icomponent(ic = nil)
+      # if the ical value already exists ( not a new model ) and this is being called during initialization
       if !ical.nil? && ic.nil?
         if @ic
           @ic
@@ -59,6 +48,6 @@ module Actic
       end
     end
 
-    alias si set_ical
+    alias si set_icomponent
   end
 end
