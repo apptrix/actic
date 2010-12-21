@@ -1,5 +1,6 @@
 Dummy::Application.routes.draw do
-  resources :dummy_resources
+
+resources :dummy_resources
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

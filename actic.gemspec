@@ -10,4 +10,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency('ri_cal', '>= 0.8.7')
   s.add_dependency('recurs')
+  s.add_dependency('haml')
+  s.add_dependency('haml-rails')
 end

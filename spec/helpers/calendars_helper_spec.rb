@@ -10,6 +10,6 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe DummyResourcesHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe CalendarsHelper do
+  #pending "add some examples to (or delete) #{__FILE__}"
 end
