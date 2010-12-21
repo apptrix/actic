@@ -1,4 +1,0 @@
-class <%= name.classify %> < ActicCalendar
-  set_table_name :<%= table_name %>
-  #Code here
-end

@@ -1,7 +1,7 @@
+
 module Actic
   class Engine < Rails::Engine
-    #engine_name :actic
-
-    config.autoload_paths << File.expand_path("../models", __FILE__)
+    config.autoload_paths << File.expand_path("../../app/models", __FILE__)
+    config.autoload_paths << File.expand_path("../../migrate", __FILE__)
   end
 end
