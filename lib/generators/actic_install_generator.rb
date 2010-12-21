@@ -4,7 +4,7 @@ require 'rails/generators/active_record'
 class ActicInstallGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
-  source_root File.join(File.dirname(__FILE__), 'templates')
+  source_root File.expand_path("../templates", __FILE__)
 
 #  def self.source_root
 #      @source_root ||= File.join(File.dirname(__FILE__), 'templates')
@@ -15,7 +15,7 @@ class ActicInstallGenerator < Rails::Generators::Base
   end
 
   def create_migration_file
-    migration_template 'migration.rb.tmpl', "db/migrate/create_#{name.downcase}s.rb"
+    migration_template 'migration.rb.tmpl', "db/migrate/create_actic_components.rb"
   end
 end
 

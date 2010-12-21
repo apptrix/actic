@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    actic (0.0.2.2)
+    actic (0.0.2.3)
       haml
       haml-rails
       recurs
