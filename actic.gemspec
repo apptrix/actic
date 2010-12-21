@@ -5,5 +5,5 @@ Gem::Specification.new do |s|
   s.summary = "Insert Actic summary."
   s.description = "Insert Actic description."
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.version = "0.0.1"
+  s.version = "0.0.2.1"
 end
