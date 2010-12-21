@@ -1,0 +1,330 @@
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (2.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateComponents (20101217173535)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "calendars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ical" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "patterns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "owner_id" integer, "owner_type" varchar(255), "type" varchar(255), "rule" varchar(255)) [0m
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "journals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "categories" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "todos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "free_busies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (1.6ms)[0m  [1mCREATE TABLE "alarms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "owner_type" varchar(255), "owner_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101217173535')
+Migrating to CreateInspectables (20101218062739)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "inspectables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101218062739')
+Migrating to CreateDummyResources (20101221031913)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "dummy_resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "suck" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101221031913')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("alarms")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("calendars")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("dummy_resources")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("events")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("free_busies")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("inspectables")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("journals")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("patterns")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("todos")
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:14:52.457650', '2010-12-21 05:14:52.457650')[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events".calendar_id = 1)[0m
+  [1m[35mFreeBusy Load (0.2ms)[0m  SELECT "free_busies".* FROM "free_busies" WHERE ("free_busies".calendar_id = 1)
+  [1m[36mJournal Load (0.2ms)[0m  [1mSELECT "journals".* FROM "journals" WHERE ("journals".calendar_id = 1)[0m
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos" WHERE ("todos".calendar_id = 1)
+  [1m[36mAlarm Load (0.2ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE ("alarms".owner_id = 1 AND "alarms".owner_type = 'Calendar')[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (1, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:17:26.011429', '2010-12-21 05:17:26.011429')
+  [1m[36mAREL (0.7ms)[0m  [1mUPDATE "calendars" SET "ical" = 'BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VEVENT
+END:VEVENT
+END:VCALENDAR
+', "updated_at" = '2010-12-21 05:17:36.275296' WHERE ("calendars"."id" = 1)[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:18:19.294866', '2010-12-21 05:18:19.294866')
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (2, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:18:59.307181', '2010-12-21 05:18:59.307181')[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (2, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:30:47.512670', '2010-12-21 05:30:47.512670')[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:32:09.498981', '2010-12-21 05:32:09.498981')
+  [1m[36mAREL (0.8ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (3, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:32:22.781781', '2010-12-21 05:32:22.781781')[0m
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 3) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:56:39.970329', '2010-12-21 05:56:39.970329')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (4, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:57:06.973926', '2010-12-21 05:57:06.973926')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 3) LIMIT 1[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 3) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:11:48.763019', '2010-12-21 06:11:48.763019')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.9ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:24:09.611813', '2010-12-21 06:24:09.611813')[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:24:14.427005', '2010-12-21 06:24:14.427005')
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 7) LIMIT 1[0m
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:30:05.233240', '2010-12-21 06:30:05.233240')
+  [1m[36mAREL (0.8ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:30:25.233917', '2010-12-21 06:30:25.233917')[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:30:28.440441', '2010-12-21 06:30:28.440441')
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:33:18.771523', '2010-12-21 06:33:18.771523')[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 10) LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (10, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:33:30.725457', '2010-12-21 06:33:30.725457')[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:35:39.499481', '2010-12-21 06:35:39.499481')
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 11) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (11, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:35:58.127258', '2010-12-21 06:35:58.127258')
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:37:09.085475', '2010-12-21 06:37:09.085475')[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 12) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (12, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:38:30.550069', '2010-12-21 06:38:30.550069')[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 12) LIMIT 1
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:38:59.029215', '2010-12-21 06:38:59.029215')[0m
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 13) LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (13, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:39:03.214963', '2010-12-21 06:39:03.214963')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:40:43.978647', '2010-12-21 06:40:43.978647')
+  [1m[36mCalendar Load (0.3ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 14) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (14, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:41:16.319093', '2010-12-21 06:41:16.319093')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (11, 'Event', 'Patterns::RRule', 'FREQ=DAILY')[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" WHERE ("events".calendar_id = 14)
+  [1m[36mFreeBusy Load (0.2ms)[0m  [1mSELECT "free_busies".* FROM "free_busies" WHERE ("free_busies".calendar_id = 14)[0m
+  [1m[35mJournal Load (0.2ms)[0m  SELECT "journals".* FROM "journals" WHERE ("journals".calendar_id = 14)
+  [1m[36mTodo Load (0.2ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE ("todos".calendar_id = 14)[0m
+  [1m[35mAlarm Load (0.2ms)[0m  SELECT "alarms".* FROM "alarms" WHERE ("alarms".owner_id = 14 AND "alarms".owner_type = 'Calendar')
+  [1m[36mCalendar Load (0.5ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 14) LIMIT 1[0m
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" ORDER BY calendars.id DESC LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE ("events".calendar_id = 14) LIMIT 1
+  [1m[36mAlarm Load (0.2ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE ("alarms".owner_id = 11 AND "alarms".owner_type = 'Event')[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" WHERE ("events".calendar_id = 14) LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events".calendar_id = 14) LIMIT 1[0m
+  [1m[35mAlarm Load (0.3ms)[0m  SELECT "alarms".* FROM "alarms" WHERE ("alarms".owner_id = 11 AND "alarms".owner_type = 'Event')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE ("events".calendar_id = 14) LIMIT 1
+  [1m[36mEvent Load (1.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events".calendar_id = 14) LIMIT 1[0m
+  [1m[35mPattern Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 11 AND "patterns".owner_type = 'Event')

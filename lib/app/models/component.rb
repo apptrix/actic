@@ -1,9 +1,10 @@
 class Component < ActiveRecord::Base
   attr_accessor :component
   after_initialize :set_component
+  before_save :trigger_parent_component#, :except => :create
 
   def set_component
-    @component = self.ical if (self.ical != nil)
+    #@component = self.ical if (self.ical != nil)
 
     [[Calendar, RiCal.Calendar], [Event, RiCal.Event], [Todo, RiCal.Todo],
      [Journal, RiCal.Journal], [Alarm, RiCal.Alarm], [FreeBusy, RiCal.Freebusy]].each {|comp|
@@ -34,7 +35,7 @@ class Component < ActiveRecord::Base
 
   def component_names
     self.class.reflect_on_all_associations.map do |a|
-      a.name if a.klass.ancestors.include? Component
+      a.name if a.klass.ancestors.include?(Component) && (a.macro != :belongs_to)
     end.compact
   end
 
@@ -49,6 +50,16 @@ class Component < ActiveRecord::Base
     self.components.each {|co|
       self.component.add_subcomponent(co)
     }
+  end
+
+  def belongs_to
+    self.class.reflect_on_all_associations.select {|a| a.macro == :belongs_to }
+  end
+
+  def trigger_parent_component
+    self.belongs_to.each {|asc|
+      self.send(asc.name).add_component(self) unless self.send(asc.name).nil?
+    } if self.new_record?
   end
 
   #These methods override ActiveRecords methods

@@ -34,7 +34,16 @@ describe Calendar do
     @calendar.save
     @calendar.events << Event.create
     @calendar.events << Event.create
-    @calendar.events.count(true).should == 2
+    @calendar.events.count.should == 2
   end
+
+  it "should update component on disconnected saves of associated models" do
+    @calendar.save
+    e = @calendar.events.new
+    e.save
+    #@calendar.reload
+    @calendar.component.to_s.should eq("BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nBEGIN:VEVENT\nEND:VEVENT\nEND:VCALENDAR\n")
+  end
+
 
 end

@@ -98,6 +98,17 @@ describe Event do
 
   end
 
+  context :abstract do
+    it "should get its belongs_to associations" do
+      @event.belongs_to.first.is_a? ActiveRecord::Reflection::AssociationReflection
+    end
 
+    it "should set the parent associations component on save if self is a new record" do
+      @event.create_calendar
+      @event.respond_to?(:trigger_parent_component).should == true
+      @event.save
+      @event.calendar.component.to_s.should eq("BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nBEGIN:VEVENT\nEND:VEVENT\nEND:VCALENDAR\n")
+    end
+  end
 
 end

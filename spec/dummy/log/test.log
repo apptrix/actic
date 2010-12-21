@@ -1387,3 +1387,1757 @@ Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 05:08:44 +0000
 Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 3.6ms)
 Rendered dummy_resources/_form.html.erb (2.2ms)
 Rendered dummy_resources/_form.html.erb (2.0ms)
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 1.7ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 56ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 5ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:37:24.409135', '2010-12-21 05:37:24.409135')
+  [1m[36mAREL (0.8ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:37:24.551146', '2010-12-21 05:37:24.551146')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:37:24.558749', '2010-12-21 05:37:24.558749')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 6, "updated_at" = '2010-12-21 05:37:24.562655' WHERE ("events"."id" = 22)[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:37:24.567096', '2010-12-21 05:37:24.567096')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 6, "updated_at" = '2010-12-21 05:37:24.571912' WHERE ("events"."id" = 23)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 6)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:37:24.580142', '2010-12-21 05:37:24.580142')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:37:24.805957', '2010-12-21 05:37:24.805957')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (25, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.5ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 25 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 05:37:24 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 4.9ms)
+Rendered dummy_resources/_form.html.erb (5.7ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 56ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:47:21.949215', '2010-12-21 05:47:21.949215')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:47:22.091700', '2010-12-21 05:47:22.091700')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:47:22.142627', '2010-12-21 05:47:22.142627')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 7, "updated_at" = '2010-12-21 05:47:22.147080' WHERE ("events"."id" = 27)[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:47:22.152131', '2010-12-21 05:47:22.152131')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 7, "updated_at" = '2010-12-21 05:47:22.157422' WHERE ("events"."id" = 28)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 7)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:47:22.164046', '2010-12-21 05:47:22.164046')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:47:22.399037', '2010-12-21 05:47:22.399037')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (30, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 30 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 05:47:22 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 4.2ms)
+Rendered dummy_resources/_form.html.erb (8.1ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 57ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:49:16.897465', '2010-12-21 05:49:16.897465')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:49:17.042579', '2010-12-21 05:49:17.042579')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:49:17.050894', '2010-12-21 05:49:17.050894')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 8, "updated_at" = '2010-12-21 05:49:17.055254' WHERE ("events"."id" = 32)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:49:17.059543', '2010-12-21 05:49:17.059543')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 8, "updated_at" = '2010-12-21 05:49:17.063100' WHERE ("events"."id" = 33)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 8)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:49:17.070055', '2010-12-21 05:49:17.070055')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:49:17.320647', '2010-12-21 05:49:17.320647')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (35, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 35 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 05:49:17 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 3.9ms)
+Rendered dummy_resources/_form.html.erb (5.7ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 7ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:52:38.535505', '2010-12-21 05:52:38.535505')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:52:38.625482', '2010-12-21 05:52:38.625482')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:52:38.634065', '2010-12-21 05:52:38.634065')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 9, "updated_at" = '2010-12-21 05:52:38.638719' WHERE ("events"."id" = 37)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:52:38.644018', '2010-12-21 05:52:38.644018')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 9, "updated_at" = '2010-12-21 05:52:38.648160' WHERE ("events"."id" = 38)[0m
+  [1m[35mSQL (2.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 9)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:52:38.657259', '2010-12-21 05:52:38.657259')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:52:38.889125', '2010-12-21 05:52:38.889125')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (40, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 40 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 05:52:38 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 5.8ms)
+Rendered dummy_resources/_form.html.erb (5.3ms)
+Rendered dummy_resources/_form.html.erb (2.2ms)
+  [1m[36mSQL (1.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:53:17.641004', '2010-12-21 05:53:17.641004')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (41, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 41 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:54:09.968971', '2010-12-21 05:54:09.968971')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (42, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 42 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:55:27.488781', '2010-12-21 05:55:27.488781')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (43, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 43 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:59:30.267971', '2010-12-21 05:59:30.267971')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (44, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 44 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:59:30.474825', '2010-12-21 05:59:30.474825')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 7ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 26ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 53ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:10:47.957437', '2010-12-21 06:10:47.957437')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:10:48.104168', '2010-12-21 06:10:48.104168')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:10:48.111874', '2010-12-21 06:10:48.111874')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 11, "updated_at" = '2010-12-21 06:10:48.116090' WHERE ("events"."id" = 46)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:10:48.121290', '2010-12-21 06:10:48.121290')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 11, "updated_at" = '2010-12-21 06:10:48.125756' WHERE ("events"."id" = 47)[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 11)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:10:48.134147', '2010-12-21 06:10:48.134147')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:10:48.315273', '2010-12-21 06:10:48.315273')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (49, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 49 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:10:48.435046', '2010-12-21 06:10:48.435046')[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:10:48 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 5.2ms)
+Rendered dummy_resources/_form.html.erb (5.5ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:15:26.540285', '2010-12-21 06:15:26.540285')
+  [1m[36mAREL (16.8ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:15:26.867240', '2010-12-21 06:15:26.867240')[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:15:26 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 17.6ms)
+Rendered dummy_resources/_form.html.erb (5.5ms)
+Rendered dummy_resources/_form.html.erb (3.0ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:16:14.524521', '2010-12-21 06:16:14.524521')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:16:14.612456', '2010-12-21 06:16:14.612456')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:16:14.619633', '2010-12-21 06:16:14.619633')
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "events" SET "calendar_id" = 15, "updated_at" = '2010-12-21 06:16:14.623607' WHERE ("events"."id" = 51)[0m
+  [1m[35mAREL (5.2ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:16:14.641592', '2010-12-21 06:16:14.641592')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 15, "updated_at" = '2010-12-21 06:16:14.681531' WHERE ("events"."id" = 52)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 15)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:16:14.688658', '2010-12-21 06:16:14.688658')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:16:14.946776', '2010-12-21 06:16:14.946776')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (54, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 54 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:16:14.976207', '2010-12-21 06:16:14.976207')[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:16:15 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 9.3ms)
+Rendered dummy_resources/_form.html.erb (61.4ms)
+Rendered dummy_resources/_form.html.erb (2.0ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 4ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:19:29.112436', '2010-12-21 06:19:29.112436')
+  [1m[36mAREL (42.5ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:19:29.201113', '2010-12-21 06:19:29.201113')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:19:29.250484', '2010-12-21 06:19:29.250484')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 17, "updated_at" = '2010-12-21 06:19:29.254413' WHERE ("events"."id" = 56)[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:19:29.258799', '2010-12-21 06:19:29.258799')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 17, "updated_at" = '2010-12-21 06:19:29.263420' WHERE ("events"."id" = 57)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 17)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:19:29.269716', '2010-12-21 06:19:29.269716')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:19:29.526137', '2010-12-21 06:19:29.526137')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (59, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 59 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:19:29.554329', '2010-12-21 06:19:29.554329')[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:19:29 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 46.6ms)
+Rendered dummy_resources/_form.html.erb (5.6ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:19:50.919236', '2010-12-21 06:19:50.919236')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:19:51.241931', '2010-12-21 06:19:51.241931')[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:19:51 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.1ms)
+Rendered dummy_resources/_form.html.erb (5.4ms)
+Rendered dummy_resources/_form.html.erb (2.2ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:20:45.210313', '2010-12-21 06:20:45.210313')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:20:45.565399', '2010-12-21 06:20:45.565399')[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:20:45 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.2ms)
+Rendered dummy_resources/_form.html.erb (5.6ms)
+Rendered dummy_resources/_form.html.erb (2.0ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.4ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:22:05.262411', '2010-12-21 06:22:05.262411')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:22:05.350064', '2010-12-21 06:22:05.350064')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:22:05.357992', '2010-12-21 06:22:05.357992')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 23, "updated_at" = '2010-12-21 06:22:05.362178' WHERE ("events"."id" = 61)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:22:05.366531', '2010-12-21 06:22:05.366531')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 23, "updated_at" = '2010-12-21 06:22:05.370685' WHERE ("events"."id" = 62)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 23)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:22:05.378609', '2010-12-21 06:22:05.378609')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:22:05.609115', '2010-12-21 06:22:05.609115')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (64, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 64 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:22:05.639161', '2010-12-21 06:22:05.639161')[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:22:05 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 4.3ms)
+Rendered dummy_resources/_form.html.erb (5.8ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:26:27.308084', '2010-12-21 06:26:27.308084')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:26:27.397448', '2010-12-21 06:26:27.397448')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:26:27.404995', '2010-12-21 06:26:27.404995')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 25, "updated_at" = '2010-12-21 06:26:27.409361' WHERE ("events"."id" = 66)[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:26:27.413870', '2010-12-21 06:26:27.413870')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 25, "updated_at" = '2010-12-21 06:26:27.437682' WHERE ("events"."id" = 67)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 25)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:26:27.444732', '2010-12-21 06:26:27.444732')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:26:27.691928', '2010-12-21 06:26:27.691928')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (69, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 69 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:26:27.723278', '2010-12-21 06:26:27.723278')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (26, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:26:27.727445', '2010-12-21 06:26:27.727445')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:26:27 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 4.8ms)
+Rendered dummy_resources/_form.html.erb (5.7ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:27:23.931983', '2010-12-21 06:27:23.931983')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:27:24.020323', '2010-12-21 06:27:24.020323')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:27:24.028970', '2010-12-21 06:27:24.028970')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 27, "updated_at" = '2010-12-21 06:27:24.033293' WHERE ("events"."id" = 72)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:27:24.037691', '2010-12-21 06:27:24.037691')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 27, "updated_at" = '2010-12-21 06:27:24.042060' WHERE ("events"."id" = 73)[0m
+  [1m[35mSQL (0.7ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 27)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:27:24.050438', '2010-12-21 06:27:24.050438')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:27:24.278515', '2010-12-21 06:27:24.278515')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (75, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 75 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:27:24.307711', '2010-12-21 06:27:24.307711')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (28, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:27:24.312184', '2010-12-21 06:27:24.312184')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:27:24 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 5.3ms)
+Rendered dummy_resources/_form.html.erb (5.7ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:28:07.670622', '2010-12-21 06:28:07.670622')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:28:07.758006', '2010-12-21 06:28:07.758006')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:28:07.765628', '2010-12-21 06:28:07.765628')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 29, "updated_at" = '2010-12-21 06:28:07.769565' WHERE ("events"."id" = 78)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:28:07.775111', '2010-12-21 06:28:07.775111')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "events" SET "calendar_id" = 29, "updated_at" = '2010-12-21 06:28:07.779391' WHERE ("events"."id" = 79)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 29)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:28:07.787780', '2010-12-21 06:28:07.787780')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:28:07.792470', '2010-12-21 06:28:07.792470')
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 30) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:28:08.037302', '2010-12-21 06:28:08.037302')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (81, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 81 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:28:08.066219', '2010-12-21 06:28:08.066219')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (31, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:28:08.071110', '2010-12-21 06:28:08.071110')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:28:08 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 5.4ms)
+Rendered dummy_resources/_form.html.erb (5.7ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.4ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:00.323213', '2010-12-21 06:31:00.323213')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:31:00.410352', '2010-12-21 06:31:00.410352')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:00.417944', '2010-12-21 06:31:00.417944')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 32, "updated_at" = '2010-12-21 06:31:00.421927' WHERE ("events"."id" = 84)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:00.426326', '2010-12-21 06:31:00.426326')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 32, "updated_at" = '2010-12-21 06:31:00.430210' WHERE ("events"."id" = 85)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 32)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:31:00.436565', '2010-12-21 06:31:00.436565')[0m
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 33) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (33, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:00.446415', '2010-12-21 06:31:00.446415')[0m
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 33) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:00.702312', '2010-12-21 06:31:00.702312')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (87, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')
+  [1m[36mPatterns::RRule Load (0.3ms)[0m  [1mSELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 87 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:31:00.729113', '2010-12-21 06:31:00.729113')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (34, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:00.733803', '2010-12-21 06:31:00.733803')[0m
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:31:00 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 5.3ms)
+Rendered dummy_resources/_form.html.erb (5.5ms)
+Rendered dummy_resources/_form.html.erb (2.0ms)
+  [1m[36mSQL (1.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 2.4ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:39.280526', '2010-12-21 06:31:39.280526')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:31:39.368288', '2010-12-21 06:31:39.368288')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:39.376311', '2010-12-21 06:31:39.376311')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 35, "updated_at" = '2010-12-21 06:31:39.380304' WHERE ("events"."id" = 90)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:39.385187', '2010-12-21 06:31:39.385187')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 35, "updated_at" = '2010-12-21 06:31:39.389180' WHERE ("events"."id" = 91)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 35)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:31:39.396626', '2010-12-21 06:31:39.396626')[0m
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 36) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (36, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:39.406524', '2010-12-21 06:31:39.406524')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:39.631691', '2010-12-21 06:31:39.631691')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (93, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 93 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:31:39.658103', '2010-12-21 06:31:39.658103')[0m
+  [1m[35mAREL (2.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (37, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:31:39.679062', '2010-12-21 06:31:39.679062')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:31:39 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 8.0ms)
+Rendered dummy_resources/_form.html.erb (5.4ms)
+Rendered dummy_resources/_form.html.erb (2.0ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 1.6ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:40:17.838173', '2010-12-21 06:40:17.838173')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:40:17.929046', '2010-12-21 06:40:17.929046')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:40:17.938108', '2010-12-21 06:40:17.938108')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 38, "updated_at" = '2010-12-21 06:40:17.942396' WHERE ("events"."id" = 96)[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:40:17.946747', '2010-12-21 06:40:17.946747')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "events" SET "calendar_id" = 38, "updated_at" = '2010-12-21 06:40:17.950204' WHERE ("events"."id" = 97)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE ("events".calendar_id = 38)
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:40:17.957245', '2010-12-21 06:40:17.957245')[0m
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 39) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (39, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:40:17.965906', '2010-12-21 06:40:17.965906')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:40:18.226673', '2010-12-21 06:40:18.226673')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (99, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 99 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 06:40:18.256322', '2010-12-21 06:40:18.256322')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (40, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 06:40:18.261320', '2010-12-21 06:40:18.261320')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 06:40:18 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 5.2ms)
+Rendered dummy_resources/_form.html.erb (5.6ms)
+Rendered dummy_resources/_form.html.erb (2.3ms)
