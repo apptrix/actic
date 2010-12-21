@@ -1,3 +1,10 @@
+PATH
+  remote: .
+  specs:
+    actic (0.0.2.1)
+      recurs
+      ri_cal (>= 0.8.7)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -39,15 +46,16 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.27)
       xpath (~> 0.1.2)
-    celerity (0.8.5)
+    celerity (0.8.6)
     childprocess (0.1.4)
       ffi (~> 0.6.3)
-    culerity (0.2.12)
+    culerity (0.2.13)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     ffi (0.6.3)
       rake (>= 0.8.7)
+    haml (3.0.25)
     i18n (0.5.0)
     json_pure (1.4.6)
     mail (2.2.12)
@@ -77,6 +85,10 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    recurs (0.0.4.7)
+      haml
+      ri_cal (>= 0.8.7)
+    ri_cal (0.8.7)
     rspec (2.3.0)
       rspec-core (~> 2.3.0)
       rspec-expectations (~> 2.3.0)
@@ -108,7 +120,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actic!
   capybara (>= 0.4.0)
   rails (= 3.0.3)
+  recurs
+  ri_cal (>= 0.8.7)
   rspec-rails (>= 2.0.0.beta)
   sqlite3-ruby
