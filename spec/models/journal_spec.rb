@@ -19,4 +19,8 @@ describe Journal do
     @journal.description
     @journal.categories
   end
+
+  it "should accept" do
+
+  end
 end

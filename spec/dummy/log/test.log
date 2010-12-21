@@ -811,3 +811,579 @@ Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 04:20:39 +0000
 Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 168.3ms)
 Rendered dummy_resources/_form.html.erb (2.2ms)
 Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 7ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#index as HTML
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1020
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1021
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1025
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1026
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 04:49:50 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 81ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+Rendered dummy_resources/_form.html.erb (99.1ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 04:49:51 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+Rendered dummy_resources/_form.html.erb (2.3ms)
+Rendered dummy_resources/_form.html.erb (2.0ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 7ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#index as HTML
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1020
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1021
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1025
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1026
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 04:51:05 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 117ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+Rendered dummy_resources/_form.html.erb (5.4ms)
+Rendered dummy_resources/_form.html.erb (2.0ms)
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 04:51:06.469723', '2010-12-21 04:51:06.469723')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 04:51:06.499099', '2010-12-21 04:51:06.499099')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 04:51:06.506864', '2010-12-21 04:51:06.506864')[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "events" SET "calendar_id" = 3, "updated_at" = '2010-12-21 04:51:06.510116' WHERE ("events"."id" = 10)
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 04:51:06.513478', '2010-12-21 04:51:06.513478')[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "events" SET "calendar_id" = 3, "updated_at" = '2010-12-21 04:51:06.518420' WHERE ("events"."id" = 11)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(true) FROM "events" WHERE ("events".calendar_id = 3)[0m
+SQLite3::SQLException: no such column: true: SELECT COUNT(true) FROM "events" WHERE ("events".calendar_id = 3)
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 04:51:06.906492', '2010-12-21 04:51:06.906492')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (12, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.3ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 12 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 04:51:07 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 3.8ms)
+Rendered dummy_resources/_form.html.erb (2.2ms)
+Rendered dummy_resources/_form.html.erb (1.9ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 7ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#index as HTML
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1020
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1021
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1025
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1026
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 04:52:25 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.2ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 117ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+Rendered dummy_resources/_form.html.erb (5.4ms)
+Rendered dummy_resources/_form.html.erb (2.1ms)
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 04:52:25.746847', '2010-12-21 04:52:25.746847')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 04:52:25.833664', '2010-12-21 04:52:25.833664')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 04:52:25.842159', '2010-12-21 04:52:25.842159')[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "events" SET "calendar_id" = 4, "updated_at" = '2010-12-21 04:52:25.846402' WHERE ("events"."id" = 14)
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 04:52:25.850868', '2010-12-21 04:52:25.850868')[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "events" SET "calendar_id" = 4, "updated_at" = '2010-12-21 04:52:25.854789' WHERE ("events"."id" = 15)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(true) FROM "events" WHERE ("events".calendar_id = 4)[0m
+SQLite3::SQLException: no such column: true: SELECT COUNT(true) FROM "events" WHERE ("events".calendar_id = 4)
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 04:52:26.035173', '2010-12-21 04:52:26.035173')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (16, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.2ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 16 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 04:52:26 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 4.2ms)
+Rendered dummy_resources/_form.html.erb (2.4ms)
+Rendered dummy_resources/_form.html.erb (2.2ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateComponents (20101217173535)
+Migrating to CreateInspectables (20101218062739)
+Migrating to CreateDummyResources (20101221031913)
+  Processing by DummyResourcesController#index as HTML
+Rendered dummy_resources/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.5ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1005
+Completed 302 Found in 6ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1006
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1010
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1011
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#index as HTML
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#new as HTML
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Redirected to http://test.host/dummy_resources/1020
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Redirected to http://test.host/dummy_resources/1021
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#create as HTML
+  Parameters: {"dummy_resource"=>{}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"dummy_resource"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1025
+Completed 302 Found in 3ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources/1026
+Completed 302 Found in 4ms
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 1ms
+  Processing by DummyResourcesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/dummy_resources
+Completed 302 Found in 3ms
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 05:08:42 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[35mDummyResource Load (0.3ms)[0m  SELECT "dummy_resources".* FROM "dummy_resources"
+Completed 200 OK in 117ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+Rendered dummy_resources/_form.html.erb (5.6ms)
+Rendered dummy_resources/_form.html.erb (2.0ms)
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:08:43.633214', '2010-12-21 05:08:43.633214')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', '2010-12-21 05:08:43.719848', '2010-12-21 05:08:43.719848')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:08:43.728082', '2010-12-21 05:08:43.728082')[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "events" SET "calendar_id" = 5, "updated_at" = '2010-12-21 05:08:43.732092' WHERE ("events"."id" = 18)
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:08:43.736881', '2010-12-21 05:08:43.736881')[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "events" SET "calendar_id" = 5, "updated_at" = '2010-12-21 05:08:43.741845' WHERE ("events"."id" = 19)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(true) FROM "events" WHERE ("events".calendar_id = 5)[0m
+SQLite3::SQLException: no such column: true: SELECT COUNT(true) FROM "events" WHERE ("events".calendar_id = 5)
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-21 05:08:43.934224', '2010-12-21 05:08:43.934224')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "patterns" ("owner_id", "owner_type", "type", "rule") VALUES (20, 'Event', 'Patterns::RRule', 'FREQ=DAILY;INTERVAL=2;COUNT=30')[0m
+  [1m[35mPatterns::RRule Load (0.2ms)[0m  SELECT "patterns".* FROM "patterns" WHERE ("patterns".owner_id = 20 AND "patterns".owner_type = 'Event') AND ("patterns"."type" = 'Patterns::RRule')
+
+
+Started GET "/dummy_resources" for 127.0.0.1 at 2010-12-21 05:08:44 +0000
+  Processing by DummyResourcesController#index as HTML
+  [1m[36mDummyResource Load (0.2ms)[0m  [1mSELECT "dummy_resources".* FROM "dummy_resources"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 3.6ms)
+Rendered dummy_resources/_form.html.erb (2.2ms)
+Rendered dummy_resources/_form.html.erb (2.0ms)

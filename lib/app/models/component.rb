@@ -4,19 +4,15 @@ class Component < ActiveRecord::Base
 
   def set_component
     @component = self.ical if (self.ical != nil)
-    if self.is_a? Calendar
-      @component ||= RiCal.Calendar
-    elsif self.is_a? Event
-      @component ||= RiCal.Event
-    elsif self.is_a? Todo
-      @component ||= RiCal.Todo
-    elsif self.is_a? Journal
-      @component ||= RiCal.Journal
-    elsif self.is_a? Alarm
-      @component ||= RiCal.Alarm
-    elsif self.is_a? FreeBusy
-      @component ||= RiCal.Freebusy
-    end
+
+    [[Calendar, RiCal.Calendar], [Event, RiCal.Event], [Todo, RiCal.Todo],
+     [Journal, RiCal.Journal], [Alarm, RiCal.Alarm], [FreeBusy, RiCal.Freebusy]].each {|comp|
+
+      if self.is_a? comp[0]
+        @component ||= comp[1]
+        break
+      end
+    }
     self.ical = @component.to_rfc2445_string if self.ical.nil?
     @component
   end
@@ -24,13 +20,13 @@ class Component < ActiveRecord::Base
   def add_component(sub_component)
      if sub_component.is_a? Event
        self.component.events << sub_component.component
-     elsif component.is_a? Todo
+     elsif sub_component.is_a? Todo
        self.component.todos << sub_component.component
-     elsif component.is_a? Journal
+     elsif sub_component.is_a? Journal
        self.component.journals << sub_component.component
-     elsif component.is_a? Alarm
+     elsif sub_component.is_a? Alarm
        self.component.alarms << sub_component.component
-     elsif component.is_a? FreeBusy
+     elsif sub_component.is_a? FreeBusy
        self.component.freebusys << sub_component.component
      end
      self.ical = self.component.to_rfc2445_string
