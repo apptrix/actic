@@ -377,3 +377,335 @@ DEPRECATION WARNING: You are using the old router DSL which will be removed in R
 DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
 DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
 DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateActicComponents (20101221090231)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "calendars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ical" varchar(255), "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "patterns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "owner_id" integer, "owner_type" varchar(255), "type" varchar(255), "rule" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "journals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "categories" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "todos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "free_busies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "alarms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_id" integer, "owner_type" varchar(255), "owner_id" integer, "dtstart" varchar(255), "dtend" varchar(255), "ical" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101221090231')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("alarms")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("calendars")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("events")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("free_busies")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("journals")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("patterns")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("todos")
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-21 11:00:42 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 181ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/calendars/1/events" for 127.0.0.1 at 2010-12-21 11:00:51 +0000
+
+ActionController::RoutingError (wrong constant name eventsController):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/calendars/1/events" for 127.0.0.1 at 2010-12-21 11:01:17 +0000
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+  Processing by Calendars::EventsController#index as HTML
+  Parameters: {"calendar_id"=>"1"}
+Completed   in 1ms
+
+NoMethodError (undefined method `events' for nil:NilClass):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (23.2ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.4ms)
+
+
+Started GET "/calendars/1/events" for 127.0.0.1 at 2010-12-21 11:03:17 +0000
+  Processing by Calendars::EventsController#index as HTML
+  Parameters: {"calendar_id"=>"1"}
+Completed   in 0ms
+
+NoMethodError (undefined method `events' for nil:NilClass):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-21 20:57:32 +0000
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+  Processing by CalendarsController#index as HTML
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars"
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (25.5ms)
+Completed 200 OK in 663ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendars/new" for 127.0.0.1 at 2010-12-21 20:57:37 +0000
+  Processing by CalendarsController#new as HTML
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 856ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', NULL, '2010-12-21 20:58:24.453823', '2010-12-21 20:58:24.453823')
+
+
+Started GET "/calendars/1/events" for 127.0.0.1 at 2010-12-21 20:58:34 +0000
+  Processing by Calendars::EventsController#index as HTML
+  Parameters: {"calendar_id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCalendar Load (0.5ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed   in 198ms
+
+ActionView::MissingTemplate (Missing template calendars/events/index with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/stevecaney/RubymineProjects/actic/spec/dummy/app/views", "/Users/stevecaney/RubymineProjects/actic/lib/app/views"):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/calendars/1/events" for 127.0.0.1 at 2010-12-21 21:04:05 +0000
+  Processing by Calendars::EventsController#index as HTML
+  Parameters: {"calendar_id"=>"1"}
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/events/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 161ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+
+
+Started GET "/calendars.json" for 127.0.0.1 at 2010-12-22 04:48:40 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 795ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars.json" for 127.0.0.1 at 2010-12-22 04:52:35 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.5ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed   in 165ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/calendars.json" for 127.0.0.1 at 2010-12-22 04:53:03 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 302ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-23 07:48:03 +0000
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 07:48:12 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 764ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendars.json" for 127.0.0.1 at 2010-12-23 07:48:19 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 207ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:06:28 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.3ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (47.5ms)
+Completed 200 OK in 201ms (Views: 55.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:06:34 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars"
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 151ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendars.js" for 127.0.0.1 at 2010-12-23 08:06:41 +0000
+  Processing by CalendarsController#index as JS
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 406 Not Acceptable in 140ms
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:11:20 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 209ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:16:07 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 701ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars.js" for 127.0.0.1 at 2010-12-23 08:16:52 +0000
+  Processing by CalendarsController#index as JS
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 406 Not Acceptable in 143ms
+
+
+Started GET "/calendars.json" for 127.0.0.1 at 2010-12-23 08:17:17 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.3ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 164ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars.js" for 127.0.0.1 at 2010-12-23 08:17:21 +0000
+  Processing by CalendarsController#index as JS
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 406 Not Acceptable in 189ms
+
+
+Started GET "/calendars.json" for 127.0.0.1 at 2010-12-23 08:17:39 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 199ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:18:27 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (1.3ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 178ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:20:11 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.5ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 591ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Users/stevecaney/RubymineProjects/actic/lib/config/routes.rb:1)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:23:27 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.5ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 744ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:24:07 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 201ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:24:14 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.7ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 200ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:24:39 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 239ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:26:54 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.5ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 199ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:30:10 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 219ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:42:54 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 166ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:50:40 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.5ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 157ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:53:42 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.3ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (38.3ms)
+Completed 200 OK in 192ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendars.json" for 127.0.0.1 at 2010-12-23 08:53:49 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.5ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 153ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars.json" for 127.0.0.1 at 2010-12-23 08:54:06 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[36mCalendar Load (0.3ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 152ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:54:41 +0000
+  Processing by CalendarsController#index as JSON
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars"
+Completed 200 OK in 164ms (Views: 3.7ms | ActiveRecord: 0.0ms)

@@ -1,7 +1,8 @@
-class CreateComponents < ActiveRecord::Migration
+class CreateActicComponents < ActiveRecord::Migration
   def self.up
     create_table :calendars do |t|
       t.string :ical
+      t.string :name
 
       t.timestamps
     end

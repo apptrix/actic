@@ -1,24 +1,25 @@
 class CalendarsController < ApplicationController
+  respond_to :json, :html
   # GET /calendars
   # GET /calendars.xml
   def index
-    @calendars = Calendar.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @calendars }
-    end
+    respond_with(@calendars = Calendar.all)
+#    respond_to do |format|
+#      format.html # index.html.erb
+#      format.xml  { render :xml => @calendars }
+#    end
   end
 
   # GET /calendars/1
   # GET /calendars/1.xml
   def show
-    @calendar = Calendar.find(params[:id])
-
+    respond_with(@calendar = Calendar.find(params[:id]))
+=begin
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @calendar }
     end
+=end
   end
 
   # GET /calendars/new

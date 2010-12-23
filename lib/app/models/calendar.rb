@@ -5,6 +5,19 @@ class Calendar < Component
   has_many :todos, :after_add => :add_component,  :after_remove => :reset_component
   has_many :alarms, :as => :owner, :after_add => :add_component,  :after_remove => :reset_component
   #has_many :components
+
+#  def as_json
+#    self.attributes
+#  end
+  def as_json(options = {})
+    r = {
+      :guid => "/calendars/#{self.id}",
+      :id => self.id,
+      :ical => self.ical
+    }
+    r
+  end
+
 end
 
 

@@ -9,6 +9,10 @@ describe Calendar do
     @calendar.is_a?(Component).should == true
   end
 
+  it "should respond to name" do
+     @calendar.respond_to?(:name).should == true
+  end
+
   it "should have an ical" do
     cl = RiCal.Calendar
     @calendar.ical.should == cl.to_s
