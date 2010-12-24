@@ -7,7 +7,7 @@ describe "calendars/index.html.haml" do
         :name => "Steves Work"
       ),
       stub_model(Calendar,
-        :name => "Steves Work"
+        :name => "Steves Play"
       )
     ])
   end

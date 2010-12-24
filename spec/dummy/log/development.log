@@ -709,3 +709,586 @@ Started GET "/calendars" for 127.0.0.1 at 2010-12-23 08:54:41 +0000
   Processing by CalendarsController#index as JSON
   [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars"
 Completed 200 OK in 164ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-23 10:00:44 +0000
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/calendars/new" for 127.0.0.1 at 2010-12-23 10:00:54 +0000
+  Processing by CalendarsController#new as HTML
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/new.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 564ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars/new" for 127.0.0.1 at 2010-12-23 10:01:20 +0000
+  Processing by CalendarsController#new as HTML
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/_form.html.haml (105.2ms)
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/new.html.haml within layouts/application (111.2ms)
+Completed 200 OK in 262ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars/new" for 127.0.0.1 at 2010-12-23 10:02:03 +0000
+  Processing by CalendarsController#new as HTML
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/_form.html.haml (7.6ms)
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/new.html.haml within layouts/application (17.6ms)
+Completed 200 OK in 181ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-23 10:08:11 +0000
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rc5HMSXee0qjJNXPwu1NZMszjbwyHQu6wu3gR3gPz9M=", "calendar"=>{"name"=>"Steves CAle"}, "commit"=>"Create Calendar"}
+Redirected to http://localhost:3000/calendars
+Completed 302 Found in 150ms
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:08:11 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 215ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:10:42 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[35mCalendar Load (0.8ms)[0m  SELECT "calendars".* FROM "calendars"
+ERROR: compiling ___sers_stevecaney__ubymine_rojects_actic_lib_app_views_calendars_index_html_haml___1854842798996426594_2177254120_2787277945728637301 RAISED /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:6: syntax error, unexpected keyword_end, expecting '}'
+...r>c.name</tr>\n", 0, false);end;_hamlout.push_text("  </td>\...
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:6: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:6: syntax error, unexpected keyword_end, expecting '}'
+...buffer = @haml_buffer.upper;end;
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:9: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def ___sers_stevecaney__ubymine_rojects_actic_lib_app_views_calendars_index_html_haml___1854842798996426594_2177254120_2787277945728637301(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "calendars/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<table>\n  <td>\n    <th>Name</th>\n  </td>\n  <td>\n", 2, false);
+
+
+
+_hamlout.append_if_string=  @calendars.each {|c|;
+_hamlout.push_text("    <tr>c.name</tr>\n", 0, false);end;_hamlout.push_text("  </td>\n</table>\n", -2, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:190:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:190:in `default_render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:126:in `to_html'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:119:in `respond'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:112:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:232:in `respond_with'
+/Users/stevecaney/RubymineProjects/actic/lib/app/controllers/calendars_controller.rb:5:in `index'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:430:in `_run__3329996749005449723__process_action__1271622065319757664__callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/haml-3.0.25/lib/sass/plugin/rack.rb:41:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (24.8ms)
+Completed   in 370ms
+
+ActionView::Template::Error (/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:6: syntax error, unexpected keyword_end, expecting '}'
+...r>c.name</tr>\n", 0, false);end;_hamlout.push_text("  </td>\...
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:6: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:6: syntax error, unexpected keyword_end, expecting '}'
+...buffer = @haml_buffer.upper;end;
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:9: syntax error, unexpected keyword_end, expecting '}'):
+    3:     %th Name
+    4:   %td
+    5:     - @calendars.each {|c|
+    6:       %tr c.name
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.5ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:12:44 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+ERROR: compiling ___sers_stevecaney__ubymine_rojects_actic_lib_app_views_calendars_index_html_haml___1854842798996426594_2171659240_2787277945728637301 RAISED /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:7: syntax error, unexpected keyword_end, expecting '}'
+end;_hamlout.push_text("</table>...
+   ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:7: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:7: syntax error, unexpected keyword_end, expecting '}'
+...buffer = @haml_buffer.upper;end;
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:10: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def ___sers_stevecaney__ubymine_rojects_actic_lib_app_views_calendars_index_html_haml___1854842798996426594_2171659240_2787277945728637301(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "calendars/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<table>\n  <tr>\n    <th>Name</th>\n  </tr>\n", 1, false);
+
+
+
+_hamlout.append_if_string=  @calendars.each {|c|;
+_hamlout.push_text("  <tr>\n    <td>c.name</td>\n  </tr>\n", 0, false);
+end;_hamlout.push_text("</table>\n", -1, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:190:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:190:in `default_render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:126:in `to_html'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:119:in `respond'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:112:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:232:in `respond_with'
+/Users/stevecaney/RubymineProjects/actic/lib/app/controllers/calendars_controller.rb:5:in `index'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:430:in `_run__3329996749005449723__process_action__1271622065319757664__callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/haml-3.0.25/lib/sass/plugin/rack.rb:41:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (4.6ms)
+Completed   in 413ms
+
+ActionView::Template::Error (/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:7: syntax error, unexpected keyword_end, expecting '}'
+end;_hamlout.push_text("</table>...
+   ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:7: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:7: syntax error, unexpected keyword_end, expecting '}'
+...buffer = @haml_buffer.upper;end;
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:10: syntax error, unexpected keyword_end, expecting '}'):
+    4: 
+    5:   - @calendars.each {|c|
+    6:     %tr
+    7:       %td c.name
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.8ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:13:03 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars"
+ERROR: compiling ___sers_stevecaney__ubymine_rojects_actic_lib_app_views_calendars_index_html_haml___1854842798996426594_2169800020_2787277945728637301 RAISED /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:8: syntax error, unexpected keyword_end, expecting '}'
+...td>\n  </tr>\n", -1, false);end;_hamlout.push_text("</table>...
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:8: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:8: syntax error, unexpected keyword_end, expecting '}'
+...buffer = @haml_buffer.upper;end;
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:11: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def ___sers_stevecaney__ubymine_rojects_actic_lib_app_views_calendars_index_html_haml___1854842798996426594_2169800020_2787277945728637301(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "calendars/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<table>\n  <tr>\n    <th>Name</th>\n  </tr>\n", 1, false);
+
+
+
+_hamlout.append_if_string=  @calendars.each {|c|;
+_hamlout.push_text("  <tr>\n    <td>#{
+_hamlout.adjust_tabs(2); _hamlout.format_script_false_true_false_true_false_true_false((c.name
+));}</td>\n  </tr>\n", -1, false);end;_hamlout.push_text("</table>\n", -1, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:190:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:190:in `default_render'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:126:in `to_html'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:119:in `respond'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/responder.rb:112:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:232:in `respond_with'
+/Users/stevecaney/RubymineProjects/actic/lib/app/controllers/calendars_controller.rb:5:in `index'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:430:in `_run__3329996749005449723__process_action__1271622065319757664__callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/haml-3.0.25/lib/sass/plugin/rack.rb:41:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (81.0ms)
+Completed   in 466ms
+
+ActionView::Template::Error (/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:8: syntax error, unexpected keyword_end, expecting '}'
+...td>\n  </tr>\n", -1, false);end;_hamlout.push_text("</table>...
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:8: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:8: syntax error, unexpected keyword_end, expecting '}'
+...buffer = @haml_buffer.upper;end;
+...                               ^
+/Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml:11: syntax error, unexpected keyword_end, expecting '}'):
+    5:   - @calendars.each {|c|
+    6:     %tr
+    7:       %td= c.name
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:14:33 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 214ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendars/new" for 127.0.0.1 at 2010-12-23 10:15:01 +0000
+  Processing by CalendarsController#new as HTML
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/_form.html.haml (4.6ms)
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/new.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 206ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-23 10:15:06 +0000
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rc5HMSXee0qjJNXPwu1NZMszjbwyHQu6wu3gR3gPz9M=", "calendar"=>{"name"=>"Test cal"}, "commit"=>"Create Calendar"}
+Redirected to http://localhost:3000/calendars
+Completed 302 Found in 149ms
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:15:06 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars"
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 164ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:15:09 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 205ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendars/new" for 127.0.0.1 at 2010-12-23 10:15:19 +0000
+  Processing by CalendarsController#new as HTML
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/_form.html.haml (4.4ms)
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/new.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 156ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars/new" for 127.0.0.1 at 2010-12-23 10:17:42 +0000
+  Processing by CalendarsController#new as HTML
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/_form.html.haml (127.4ms)
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/new.html.haml within layouts/application (133.5ms)
+Completed 200 OK in 714ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-23 10:17:50 +0000
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rc5HMSXee0qjJNXPwu1NZMszjbwyHQu6wu3gR3gPz9M=", "calendar"=>{"name"=>"Test cal"}, "commit"=>"Create Calendar"}
+Redirected to http://localhost:3000/calendars
+Completed 302 Found in 149ms
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:17:50 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 234ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendars/new" for 127.0.0.1 at 2010-12-23 10:18:56 +0000
+  Processing by CalendarsController#new as HTML
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/_form.html.haml (4.5ms)
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/new.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 200ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/calendars" for 127.0.0.1 at 2010-12-23 10:19:00 +0000
+  Processing by CalendarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rc5HMSXee0qjJNXPwu1NZMszjbwyHQu6wu3gR3gPz9M=", "calendar"=>{"name"=>"Test cal"}, "commit"=>"Create Calendar"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test cal', '2010-12-23 10:19:00.603814', '2010-12-23 10:19:00.603814')[0m
+Redirected to http://localhost:3000/calendars/2
+Completed 302 Found in 230ms
+
+
+Started GET "/calendars/2" for 127.0.0.1 at 2010-12-23 10:19:00 +0000
+  Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/show.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 203ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-23 10:19:08 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 165ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+DEPRECATION WARNING: RAILS_DEFAULT_LOGGER is deprecated. Please use ::Rails.logger. (called from block in <module:IRB> at /Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/inspector.rb:86)
+2010-12-24T01:18:45+00:00
+2010-12-24T01:18:48+00:00

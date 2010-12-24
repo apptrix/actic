@@ -21,13 +21,30 @@ ActiveRecord::Migrator.migrate File.expand_path("../dummy/db/migrate/", __FILE__
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
-
+require 'database_cleaner'
 RSpec.configure do |config|
   # Remove this line if you don't want RSpec's should and should_not
   # methods or matchers
   require 'rspec/expectations'
   config.include RSpec::Matchers
+#=begin
+  DatabaseCleaner.app_root = Rails.root
 
+  DatabaseCleaner[:active_record,{:connection => :two}]
   # == Mock Framework
-  config.mock_with :rspec
+  config.mock_with :factory_girl
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+#=end
 end

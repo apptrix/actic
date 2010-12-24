@@ -2,100 +2,49 @@ class EventsController < ApplicationController
   before_filter :get_calendar
     # GET /events/new
   # GET /events/new.xml
-  def new
-    #@event = @calendar.events.new
-
-  #  respond_to do |format|
-  #   format.html # new.html.erb
-  #    format.xml  { render :xml => @event }
-  #  end
-  end
+  respond_to :json, :html
 
   def index
+    respond_with(@calendar, (@events = @calendar.events.all))
+  end
 
+  def show
+    respond_with(@calendar, (@event = @calendar.events.find(params[:id])))
+  end
+
+  def new
+    respond_with(@calendar, (@event = @calendar.events.new))
+  end
+
+  def edit
+    respond_with(@calendar, (@event = @calendar.events.find(params[:id])))
+  end
+
+  def create
+    @event = @calendar.events.create(params[:event])
+    flash[:notice] = "Event successfully created" if @event.save
+    respond_with(@calendar, @event)
+  end
+
+  def update
+    @event = @calendar.events.find(params[:id])
+    @event.update_attributes(params[:calendar])
+    respond_with(@calendar, @event)
+  end
+
+  def destroy
+    @event = @calendar.events.find(params[:id])
+    @event.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(calendars_events_url(@calendar, @event)) }
+      format.xml  { head :ok }
+    end
   end
 
   private
     def get_calendar
       @calendar = Calendar.find(params[:calendar_id]) unless params[:calendar_id].nil?
     end
-# GET /calendars
-  # GET /calendars.xml
-=begin
-  before_filter :get_calendar
 
-  def index
-    @events = @calendar.events.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @events }
-    end
-  end
-
-  # GET /events/1
-  # GET /events/1.xml
-  def show
-    @event = @calendar.events.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @event }
-    end
-  end
-
-  # GET /events/1/edit
-  def edit
-    @event = @calendar.events.find(params[:id])
-  end
-
-  # POST /events
-  # POST /events.xml
-  def create
-    @event = @calendar.events.new(params[:event])
-
-    respond_to do |format|
-      if @event.save
-        format.html { redirect_to([@calendar,@event], :notice => 'Dummy resource was successfully created.') }
-        format.xml  { render :xml => [@calendar,@event], :status => :created, :location => @event }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /events/1
-  # PUT /events/1.xml
-  def update
-    @event = @calendar.events.find(params[:id])
-
-    respond_to do |format|
-      if @event.update_attributes(params[:event])
-        format.html { redirect_to(@event, :notice => 'Dummy resource was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /events/1
-  # DELETE /events/1.xml
-  def destroy
-    @event = @calendar.events.find(params[:id])
-    @event.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(events_url) }
-      format.xml  { head :ok }
-    end
-  end
-  
-  private
-    def get_calendar
-      @calendar = Calendar.find(params[:event_id]) unless params[:event_id].nil?
-    end  
-=end
 end

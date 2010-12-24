@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
   s.add_dependency('inherited_resources', '1.1.2')
 
   s.add_development_dependency('factory_girl')
+  s.add_development_dependency('database_cleaner')
 end

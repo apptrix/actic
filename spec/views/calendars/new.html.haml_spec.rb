@@ -13,6 +13,7 @@ describe "calendars/new.html.haml" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => calendars_path, :method => "post" do
       assert_select "input#calendar_name", :name => "calendar[name]"
+      assert_select "input#calendar_submit", :name => "commit"
     end
   end
 end

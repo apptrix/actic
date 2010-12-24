@@ -2,11 +2,12 @@ require 'spec_helper'
 
 describe EventsController do
 
-
   before(:each) do
     @calendar = mock_model(Calendar)
-    @events = mock('events')
+    @events = 6.times{ Factory(:event) }
+    #@events.stub!(:all)
     @calendar.stub!(:events).and_return(@events)
+    #@calendar.events
     Calendar.stub!(:find).and_return(@calendar)
   end
 
@@ -15,6 +16,7 @@ describe EventsController do
   end
 
 it "should render index template" do
+
    do_get
    response.should render_template('index')
 end
