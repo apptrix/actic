@@ -1,5 +1,6 @@
 class CalendarsController < ApplicationController
   respond_to :json, :html
+  #verify :method => :post, :only => :create
 
   def index
     respond_with(@calendars = Calendar.all)

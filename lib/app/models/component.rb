@@ -1,4 +1,5 @@
 class Component < ActiveRecord::Base
+  validates :ical, :presence => true, :format => /BEGIN:\.*/
   attr_accessor :component
   after_initialize :set_component
   before_save :trigger_parent_component#, :except => :create

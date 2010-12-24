@@ -9,6 +9,16 @@ describe Calendar do
     @calendar.is_a?(Component).should == true
   end
 
+  it "should not (as a component) be valid with no ical string" do
+    @calendar.ical = ''
+    @calendar.should_not be_valid # wrong
+  end
+
+  it "should not (as a component) be valid with bad ical string" do
+    @calendar.ical = 'END'
+    @calendar.should_not be_valid # wrong
+  end
+
   it "should respond to name" do
      @calendar.respond_to?(:name).should == true
   end

@@ -1292,3 +1292,21 @@ Completed 200 OK in 165ms (Views: 15.9ms | ActiveRecord: 0.4ms)
 DEPRECATION WARNING: RAILS_DEFAULT_LOGGER is deprecated. Please use ::Rails.logger. (called from block in <module:IRB> at /Users/stevecaney/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/inspector.rb:86)
 2010-12-24T01:18:45+00:00
 2010-12-24T01:18:48+00:00
+  [1m[36mSQL (82.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (26.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 08:50:56.179769', '2010-12-24 08:50:56.179769')
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 09:07:47.597531', '2010-12-24 09:07:47.597531')[0m
+  [1m[35mAREL (1.2ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 09:09:36.474784', '2010-12-24 09:09:36.474784')
+  [1m[36mEvent Load (1.4ms)[0m  [1mSELECT "events".* FROM "events" ORDER BY events.id DESC LIMIT 1[0m
+DEPRECATION WARNING: save(true) is deprecated, please give save(:validate => true) instead. (called from irb_binding at (irb):39)
+  [1m[35mEvent Load (1.6ms)[0m  SELECT "events".* FROM "events" ORDER BY events.id DESC LIMIT 1
+  [1m[36mEvent Load (1.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events"."id" = 3) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "events" SET "calendar_id" = 1, "updated_at" = '2010-12-24 09:33:39.186447' WHERE ("events"."id" = 3)

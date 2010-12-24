@@ -9,4 +9,6 @@ describe Component do
   it "should get its belongs_to associations" do
 
   end
+
+
 end
