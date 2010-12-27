@@ -1,3 +1,23 @@
 = Actic
 
-This project rocks and uses MIT-LICENSE.
+WARNING: THIS IS STILL VERY ALPHA!
+This project is an icalendar engine for Rails3, it fuses ActiveRecord with iCal ( using the RiCal library ) and uses MIT-LICENSE.
+
+This is a very alpha software, functionality is currently incomplete, the model layer is close to finished,
+but the controller and views are a long way off.
+
+
+To install
+
+in your Gemfile
+ gem 'actic'
+
+bundle install
+
+to install the engine into your app:
+
+rails g actic_install
+
+This will give you
+Calendars that can accept events and other components, the specs are still very limited, there is alot
+more that I would like to ( and will ) add to this engine.

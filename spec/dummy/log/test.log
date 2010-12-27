@@ -27186,3 +27186,738 @@ END:VCALENDAR
   [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "calendars" WHERE ("calendars"."id" = 1)[0m
 Redirected to http://test.host/calendars
 Completed 302 Found in 2ms
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateActicComponents (20101221090231)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (2.3ms)[0m  [1mDELETE FROM "calendars";[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "events";
+  [1m[36mSQL (2.2ms)[0m  [1mDELETE FROM "patterns";[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "journals";
+  [1m[36mSQL (3.6ms)[0m  [1mDELETE FROM "todos";[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "free_busies";
+  [1m[36mSQL (1.8ms)[0m  [1mDELETE FROM "alarms";[0m
+  Processing by CalendarsController#index as HTML
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars"
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 312ms (Views: 8.3ms | ActiveRecord: 18.0ms)
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.201219', '2010-12-24 10:31:30.201219')
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.231220', '2010-12-24 10:31:30.231220')
+  Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>1}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:31:30.274979', '2010-12-24 10:31:30.274979')
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 7ms
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:31:30.344033', '2010-12-24 10:31:30.344033')[0m
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 4ms
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" ORDER BY calendars.id DESC LIMIT 1
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:31:30.354488', '2010-12-24 10:31:30.354488')[0m
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 4ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:31:30.360276', '2010-12-24 10:31:30.360276')[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 4ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name", "ical"=>""}}
+Completed 200 OK in 11ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "calendars"[0m
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name", "ical"=>""}}
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.396219', '2010-12-24 10:31:30.396219')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:31:30 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:31:30 UTC, "id"=>1}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 6ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.413370', '2010-12-24 10:31:30.413370')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.415420', '2010-12-24 10:31:30.415420')
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:31:30 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:31:30 UTC, "id"=>2}
+  [1m[36mCalendar Load (0.3ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 4ms
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" ORDER BY calendars.id DESC LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.428676', '2010-12-24 10:31:30.428676')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.430829', '2010-12-24 10:31:30.430829')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.432117', '2010-12-24 10:31:30.432117')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:31:30 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:31:30 UTC, "id"=>3}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 3) LIMIT 1
+Redirected to http://test.host/calendars/3
+Completed 302 Found in 4ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.442622', '2010-12-24 10:31:30.442622')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.444583', '2010-12-24 10:31:30.444583')
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:31:30 UTC, "ical"=>1, "name"=>"Name", "updated_at"=>2010-12-24 10:31:30 UTC, "id"=>2}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 4ms
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.455872', '2010-12-24 10:31:30.455872')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.457740', '2010-12-24 10:31:30.457740')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:31:30 UTC, "ical"=>1, "name"=>"Name", "updated_at"=>2010-12-24 10:31:30 UTC, "id"=>2}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 5ms
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.468400', '2010-12-24 10:31:30.468400')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.473611', '2010-12-24 10:31:30.473611')
+  Processing by CalendarsController#destroy as HTML
+  Parameters: {"id"=>1}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "calendars" WHERE ("calendars"."id" = 1)
+Redirected to http://test.host/calendars
+Completed 302 Found in 3ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:31:30.482834', '2010-12-24 10:31:30.482834')[0m
+  Processing by CalendarsController#destroy as HTML
+  Parameters: {"id"=>1}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "calendars" WHERE ("calendars"."id" = 1)[0m
+Redirected to http://test.host/calendars
+Completed 302 Found in 2ms
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateActicComponents (20101221090231)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (2.7ms)[0m  [1mDELETE FROM "calendars";[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "events";
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "patterns";[0m
+  [1m[35mSQL (2.4ms)[0m  DELETE FROM "journals";
+  [1m[36mSQL (2.1ms)[0m  [1mDELETE FROM "todos";[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "free_busies";
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "alarms";[0m
+  Processing by CalendarsController#index as HTML
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars"
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 189ms (Views: 8.2ms | ActiveRecord: 17.1ms)
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.563863', '2010-12-24 10:32:30.563863')
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.1ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.593411', '2010-12-24 10:32:30.593411')
+  Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>1}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:32:30.634671', '2010-12-24 10:32:30.634671')
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 8ms
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:32:30.702870', '2010-12-24 10:32:30.702870')[0m
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 4ms
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" ORDER BY calendars.id DESC LIMIT 1
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:32:30.713199', '2010-12-24 10:32:30.713199')[0m
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 4ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:32:30.718706', '2010-12-24 10:32:30.718706')[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 4ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name", "ical"=>""}}
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "calendars"[0m
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name", "ical"=>""}}
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.751677', '2010-12-24 10:32:30.751677')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:32:30 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:32:30 UTC, "id"=>1}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 6ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.765421', '2010-12-24 10:32:30.765421')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.767242', '2010-12-24 10:32:30.767242')
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:32:30 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:32:30 UTC, "id"=>2}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 5ms
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" ORDER BY calendars.id DESC LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.781378', '2010-12-24 10:32:30.781378')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.783167', '2010-12-24 10:32:30.783167')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.784304', '2010-12-24 10:32:30.784304')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:32:30 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:32:30 UTC, "id"=>3}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 3) LIMIT 1
+Redirected to http://test.host/calendars/3
+Completed 302 Found in 4ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.794368', '2010-12-24 10:32:30.794368')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.796129', '2010-12-24 10:32:30.796129')
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:32:30 UTC, "ical"=>1, "name"=>"Name", "updated_at"=>2010-12-24 10:32:30 UTC, "id"=>2}
+  [1m[36mCalendar Load (0.1ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 3ms
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.806317', '2010-12-24 10:32:30.806317')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.808158', '2010-12-24 10:32:30.808158')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:32:30 UTC, "ical"=>1, "name"=>"Name", "updated_at"=>2010-12-24 10:32:30 UTC, "id"=>2}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 5ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.819252', '2010-12-24 10:32:30.819252')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.823994', '2010-12-24 10:32:30.823994')
+  Processing by CalendarsController#destroy as HTML
+  Parameters: {"id"=>1}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "calendars" WHERE ("calendars"."id" = 1)
+Redirected to http://test.host/calendars
+Completed 302 Found in 2ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:32:30.833470', '2010-12-24 10:32:30.833470')[0m
+  Processing by CalendarsController#destroy as HTML
+  Parameters: {"id"=>1}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "calendars" WHERE ("calendars"."id" = 1)[0m
+Redirected to http://test.host/calendars
+Completed 302 Found in 2ms
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateActicComponents (20101221090231)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "calendars";[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "events";
+  [1m[36mSQL (1.9ms)[0m  [1mDELETE FROM "patterns";[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "journals";
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "todos";[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM "free_busies";
+  [1m[36mSQL (2.5ms)[0m  [1mDELETE FROM "alarms";[0m
+  Processing by CalendarsController#index as HTML
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars"
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 188ms (Views: 8.4ms | ActiveRecord: 17.6ms)
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.052738', '2010-12-24 10:34:08.052738')
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.082706', '2010-12-24 10:34:08.082706')
+  Processing by CalendarsController#show as HTML
+  Parameters: {"id"=>1}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#new as HTML
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:34:08.125247', '2010-12-24 10:34:08.125247')
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 7ms
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:34:08.191602', '2010-12-24 10:34:08.191602')[0m
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 4ms
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" ORDER BY calendars.id DESC LIMIT 1
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:34:08.202451', '2010-12-24 10:34:08.202451')[0m
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 4ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name"}}
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Test Name', '2010-12-24 10:34:08.208020', '2010-12-24 10:34:08.208020')[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 4ms
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name", "ical"=>""}}
+Completed 200 OK in 10ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "calendars"[0m
+  Processing by CalendarsController#create as HTML
+  Parameters: {"calendar"=>{"name"=>"Test Name", "ical"=>""}}
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "calendars"
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.242137', '2010-12-24 10:34:08.242137')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:34:08 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:34:08 UTC, "id"=>1}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Redirected to http://test.host/calendars/1
+Completed 302 Found in 6ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.255801', '2010-12-24 10:34:08.255801')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.257637', '2010-12-24 10:34:08.257637')
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:34:08 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:34:08 UTC, "id"=>2}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 4ms
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" ORDER BY calendars.id DESC LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.271540', '2010-12-24 10:34:08.271540')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.273501', '2010-12-24 10:34:08.273501')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.274695', '2010-12-24 10:34:08.274695')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:34:08 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:34:08 UTC, "id"=>3}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 3) LIMIT 1
+Redirected to http://test.host/calendars/3
+Completed 302 Found in 4ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.286115', '2010-12-24 10:34:08.286115')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.287899', '2010-12-24 10:34:08.287899')
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:34:08 UTC, "ical"=>1, "name"=>"Name", "updated_at"=>2010-12-24 10:34:08 UTC, "id"=>2}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1[0m
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 4ms
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.297961', '2010-12-24 10:34:08.297961')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.299759', '2010-12-24 10:34:08.299759')[0m
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:34:08 UTC, "ical"=>1, "name"=>"Name", "updated_at"=>2010-12-24 10:34:08 UTC, "id"=>2}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1
+Redirected to http://test.host/calendars/2
+Completed 302 Found in 3ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.310099', '2010-12-24 10:34:08.310099')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.311871', '2010-12-24 10:34:08.311871')
+  Processing by CalendarsController#update as HTML
+  Parameters: {"created_at"=>2010-12-24 10:34:08 UTC, "ical"=>"BEGIN:VCALENDAR\nPRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\nEND:VCALENDAR\n", "name"=>"Name", "updated_at"=>2010-12-24 10:34:08 UTC, "id"=>2}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 2) LIMIT 1[0m
+Completed   in 3ms
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.321423', '2010-12-24 10:34:08.321423')
+  Processing by CalendarsController#destroy as HTML
+  Parameters: {"id"=>1}
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "calendars" WHERE ("calendars"."id" = 1)
+Redirected to http://test.host/calendars
+Completed 302 Found in 2ms
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', 'Name', '2010-12-24 10:34:08.328951', '2010-12-24 10:34:08.328951')[0m
+  Processing by CalendarsController#destroy as HTML
+  Parameters: {"id"=>1}
+  [1m[35mCalendar Load (0.2ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "calendars" WHERE ("calendars"."id" = 1)[0m
+Redirected to http://test.host/calendars
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 10:47:38.715902', '2010-12-24 10:47:38.715902')
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 10:47:51.540073', '2010-12-24 10:47:51.540073')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (15.2ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 10:50:00.355712', '2010-12-24 10:50:00.355712')
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', NULL, '2010-12-24 10:50:05.098479', '2010-12-24 10:50:05.098479')[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 10:53:09.007778', '2010-12-24 10:53:09.007778')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VEVENT
+END:VEVENT
+END:VCALENDAR
+', 'Name', '2010-12-24 10:53:09.160167', '2010-12-24 10:53:09.160167')[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "events" SET "calendar_id" = 2, "updated_at" = '2010-12-24 10:53:09.169043' WHERE ("events"."id" = 4)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 10:54:59.086650', '2010-12-24 10:54:59.086650')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 10:56:26.149044', '2010-12-24 10:56:26.149044')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VEVENT
+END:VEVENT
+END:VCALENDAR
+', 'Name', '2010-12-24 10:56:26.231783', '2010-12-24 10:56:26.231783')[0m
+  [1m[35mAREL (0.1ms)[0m  UPDATE "events" SET "calendar_id" = 3, "updated_at" = '2010-12-24 10:56:26.238143' WHERE ("events"."id" = 6)
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-24 10:56:27.311018', '2010-12-24 10:56:27.311018')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', NULL, '2010-12-24 10:56:33.292062', '2010-12-24 10:56:33.292062')

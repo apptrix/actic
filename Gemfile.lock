@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    actic (0.0.3)
+    actic (0.0.4)
       haml
       haml-rails
       inherited_resources (= 1.1.2)

@@ -1,7 +1,25 @@
 require 'spec_helper'
 
 describe EventsController do
+ describe "GET 'index'" do
+   it "should be successful" do
+     get "index"
+     response.should be_success
+   end
 
+   it "renders the index template" do
+     get :index
+     response.should render_template('index')
+   end
+
+   it "assigns a @event variable" do
+     e = Factory
+   end
+ end
+end
+
+
+=begin
   before(:each) do
     @calendar = mock_model(Calendar)
     @events = 6.times{ Factory(:event) }
@@ -21,10 +39,6 @@ it "should render index template" do
    response.should render_template('index')
 end
 
-end
-
-
-=begin
   it "should build a new event" do
     mock_calendar.stub!(:events).and_return(events =  mock("Array of events"))
     events.should_receive(:new).and_return(mock_event)
