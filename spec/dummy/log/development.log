@@ -1310,3 +1310,203 @@ DEPRECATION WARNING: save(true) is deprecated, please give save(:validate => tru
   [1m[35mEvent Load (1.6ms)[0m  SELECT "events".* FROM "events" ORDER BY events.id DESC LIMIT 1
   [1m[36mEvent Load (1.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events"."id" = 3) LIMIT 1[0m
   [1m[35mAREL (0.4ms)[0m  UPDATE "events" SET "calendar_id" = 1, "updated_at" = '2010-12-24 09:33:39.186447' WHERE ("events"."id" = 3)
+  [1m[36mCalendar Load (0.2ms)[0m  [1mSELECT "calendars".* FROM "calendars" ORDER BY calendars.id DESC LIMIT 1[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE ("events".calendar_id = 2)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "calendars" ("ical", "name", "created_at", "updated_at") VALUES ('BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+END:VCALENDAR
+', NULL, '2010-12-28 00:14:38.141116', '2010-12-28 00:14:38.141116')
+  [1m[36mJournal Load (0.3ms)[0m  [1mSELECT "journals".* FROM "journals" WHERE ("journals".calendar_id = 3)[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "journals" ("calendar_id", "dtstart", "dtend", "ical", "categories", "description", "created_at", "updated_at") VALUES (3, NULL, NULL, 'BEGIN:VJOURNAL
+END:VJOURNAL
+', NULL, NULL, '2010-12-28 00:14:45.359598', '2010-12-28 00:14:45.359598')
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "journals" ("calendar_id", "dtstart", "dtend", "ical", "categories", "description", "created_at", "updated_at") VALUES (3, NULL, NULL, 'BEGIN:VJOURNAL
+END:VJOURNAL
+', NULL, NULL, '2010-12-28 00:16:52.146205', '2010-12-28 00:16:52.146205')[0m
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-28 00:19:39.180878', '2010-12-28 00:19:39.180878')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "journals" ("calendar_id", "dtstart", "dtend", "ical", "categories", "description", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VJOURNAL
+END:VJOURNAL
+', NULL, NULL, '2010-12-28 00:19:39.192857', '2010-12-28 00:19:39.192857')[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "alarms" ("calendar_id", "owner_type", "owner_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, NULL, 'BEGIN:VALARM
+END:VALARM
+', '2010-12-28 00:19:39.208489', '2010-12-28 00:19:39.208489')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "alarms" ("calendar_id", "owner_type", "owner_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, NULL, 'BEGIN:VALARM
+END:VALARM
+', '2010-12-28 00:54:54.060088', '2010-12-28 00:54:54.060088')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "events" ("calendar_id", "dtstart", "dtend", "ical", "created_at", "updated_at") VALUES (NULL, NULL, NULL, 'BEGIN:VEVENT
+END:VEVENT
+', '2010-12-28 00:54:54.196477', '2010-12-28 00:54:54.196477')[0m
+  [1m[35mAREL (0.1ms)[0m  UPDATE "alarms" SET "owner_id" = 5, "owner_type" = 'Event', "updated_at" = '2010-12-28 00:54:54.203127' WHERE ("alarms"."id" = 2)
+
+
+Started GET "/events" for 127.0.0.1 at 2010-12-28 00:59:44 +0000
+
+ActionController::RoutingError (No route matches "/events"):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2010-12-28 01:01:12 +0000
+
+ActionController::RoutingError (No route matches "/events"):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/calendars" for 127.0.0.1 at 2010-12-28 09:39:28 +0000
+  Processing by CalendarsController#index as HTML
+  [1m[36mCalendar Load (0.5ms)[0m  [1mSELECT "calendars".* FROM "calendars"[0m
+Rendered /Users/stevecaney/RubymineProjects/actic/lib/app/views/calendars/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 619ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/calendars/1.ical" for 127.0.0.1 at 2010-12-28 09:39:40 +0000
+  Processing by CalendarsController#show as ICAL
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mCalendar Load (0.3ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed 406 Not Acceptable in 149ms
+
+
+Started GET "/calendars/1.ics" for 127.0.0.1 at 2010-12-28 09:39:45 +0000
+  Processing by CalendarsController#show as ICS
+  Parameters: {"id"=>"1"}
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed 406 Not Acceptable in 152ms
+
+
+Started GET "/calendars/1.json" for 127.0.0.1 at 2010-12-28 09:39:56 +0000
+  Processing by CalendarsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 161ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars/1.ics" for 127.0.0.1 at 2010-12-28 09:40:06 +0000
+  Processing by CalendarsController#show as ICS
+  Parameters: {"id"=>"1"}
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed 406 Not Acceptable in 149ms
+
+
+Started GET "/calendars/1.ical" for 127.0.0.1 at 2010-12-28 09:40:14 +0000
+  Processing by CalendarsController#show as ICAL
+  Parameters: {"id"=>"1"}
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed 406 Not Acceptable in 149ms
+
+
+Started GET "/calendars/1.ical" for 127.0.0.1 at 2010-12-28 09:42:16 +0000
+  Processing by CalendarsController#show as ICAL
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCalendar Load (0.5ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed 406 Not Acceptable in 523ms
+
+
+Started GET "/calendars/1.ics" for 127.0.0.1 at 2010-12-28 09:47:56 +0000
+  Processing by CalendarsController#show as ICS
+  Parameters: {"id"=>"1"}
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed 406 Not Acceptable in 148ms
+
+
+Started GET "/calendars/1.xml" for 127.0.0.1 at 2010-12-28 09:48:04 +0000
+  Processing by CalendarsController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mCalendar Load (0.5ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed 406 Not Acceptable in 148ms
+
+
+Started GET "/calendars/1.json" for 127.0.0.1 at 2010-12-28 09:48:35 +0000
+  Processing by CalendarsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 204ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars/1.ical" for 127.0.0.1 at 2010-12-28 09:52:05 +0000
+  Processing by CalendarsController#show as ICAL
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed 406 Not Acceptable in 554ms
+
+
+Started GET "/calendars/1.ical" for 127.0.0.1 at 2010-12-28 09:52:37 +0000
+  Processing by CalendarsController#show as ICAL
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCalendar Load (0.5ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed 200 OK in 571ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars/1.ics" for 127.0.0.1 at 2010-12-28 09:52:56 +0000
+  Processing by CalendarsController#show as ICS
+  Parameters: {"id"=>"1"}
+  [1m[36mCalendar Load (0.4ms)[0m  [1mSELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1[0m
+Completed   in 203ms
+
+ActionView::MissingTemplate (Missing template calendars/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:ics], :locale=>[:en, :en]} in view paths "/Users/stevecaney/RubymineProjects/actic/spec/dummy/app/views", "/Users/stevecaney/RubymineProjects/actic/lib/app/views"):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/calendars/1.ical" for 127.0.0.1 at 2010-12-28 09:53:08 +0000
+  Processing by CalendarsController#show as ICAL
+  Parameters: {"id"=>"1"}
+  [1m[35mCalendar Load (0.4ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed 200 OK in 158ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/calendars/1.ics" for 127.0.0.1 at 2010-12-28 09:56:24 +0000
+  Processing by CalendarsController#show as ICS
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mCalendar Load (0.3ms)[0m  SELECT "calendars".* FROM "calendars" WHERE ("calendars"."id" = 1) LIMIT 1
+Completed   in 525ms
+
+ActionView::MissingTemplate (Missing template calendars/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:ics], :locale=>[:en, :en]} in view paths "/Users/stevecaney/RubymineProjects/actic/spec/dummy/app/views", "/Users/stevecaney/RubymineProjects/actic/lib/app/views"):
+  
+
+Rendered /Users/stevecaney/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)

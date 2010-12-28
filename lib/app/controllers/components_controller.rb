@@ -1,5 +1,7 @@
-class EventsController < ApplicationController
-  before_filter :get_calendar
+# Experimental
+=begin
+class ComponentsController < ApplicationController
+  before_filter :get_super_component
   respond_to :json, :html
 
   def index
@@ -41,8 +43,14 @@ class EventsController < ApplicationController
   end
 
   private
-    def get_calendar
-      @calendar = Calendar.find(params[:calendar_id]) unless params[:calendar_id].nil?
-    end
 
+  def get_super_component
+  [[:calendar_id, Calendar], [:event_id, Event]].each { |c|
+    if params.keys.include?(c[0])
+      @base_model = c[1].find(c[0])
+      break
+    end
+  }
+  end
 end
+=end

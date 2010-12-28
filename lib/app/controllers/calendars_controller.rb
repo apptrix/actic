@@ -1,5 +1,5 @@
 class CalendarsController < ApplicationController
-  respond_to :json, :html
+  respond_to :json, :html, :ical, :ics
   #verify :method => :post, :only => :create
 
   def index

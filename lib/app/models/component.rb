@@ -103,5 +103,9 @@ class Component < ActiveRecord::Base
   end
   end
 
+  def to_ical(options ={})
+    self.ical.to_rfc2445_string
+  end
+
 end
 
