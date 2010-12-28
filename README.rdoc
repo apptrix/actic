@@ -3,7 +3,7 @@
 WARNING: THIS IS STILL VERY ALPHA!
 This project is an icalendar engine for Rails3, it fuses ActiveRecord with iCal ( using the RiCal library ) and uses MIT-LICENSE.
 
-This is a very alpha software, functionality is currently incomplete, the model layer is close to finished,
+This is very alpha software, functionality is currently incomplete, the model layer is close to finished,
 but the controller and views are a long way off.
 
 
