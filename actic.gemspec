@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary = "iCal for ORM"
   s.description = "Actic is a calendaring engine for Rails3, it combines an iCal interface with ORM. It acts as a wrapper around the RiCal library"
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.version = "0.0.5"
+  s.version = "0.0.5.1"
   s.rubyforge_project = "actic"
   s.authors     = ["Steve A Martin"]
   s.email       = ["steve@apptrix.net"]
