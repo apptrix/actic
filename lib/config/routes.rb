@@ -1,5 +1,5 @@
 Rails.application.routes.draw do #|map|
-   resources :calendars, :shallow => true do
+   resources :calendars do
      resources :events do
        resources :alarms
      end
@@ -8,8 +8,8 @@ Rails.application.routes.draw do #|map|
      resources :todos
    end
 
- #  resources :events do
- #    resources :alarms
- #  end
+   resources :events do
+     resources :alarms
+   end
 
 end
